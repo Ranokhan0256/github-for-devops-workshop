@@ -1,0 +1,25 @@
+   1 git init                         //basic command to initilize the empty git vcs repositry
+   2 git add testing.py
+   3 git status
+   4 git add testing1.py            // to change the status of file from untracked to stage
+   5 git rm --cached                //to get back from stage to untracked status
+   6 git rm --cached testing.py
+   7 git status
+   8 git add .                           // change the status of all files
+   9 git commit -m "agged testing files"  //from stage to tracked files     
+  10 git restore testing.py                   //restore the deleted stuff  
+  11 git status
+  12  clear
+  13 rm testimg.py
+  14   history
+  15   git remote add origin (url of that repository)          // add repository
+  16   git remote -v            // to check that repository is added or not
+     //if you create repository on github then branch name is main
+    // but if you create repository on local then its name is master 
+
+  17   git push origin master        //if  this error occur error: src refspec master does not match any
+error: failed to push some refs to  it mean you have to create  classis token on github nd copy url
+
+18   git remote set-url origin https://(url-token@url of thr github repository)
+19   git remote -v              //to chek is it correct
+20   git push origin master    //will be pushed after token created

@@ -22,4 +22,72 @@ error: failed to push some refs to  it mean you have to create  classis token on
 
 18   git remote set-url origin https://(url-token@url of thr github repository)
 19   git remote -v              //to chek is it correct
-20   git push origin master    //will be pushed after token created
+20   git push origin master    //will be pushed after token createdgit 
+
+
+
+
+21 git remote set-url origin https://github.com/Ranokhan0256/github-for-devops-workshop.git
+
+//Create an initial commit 
+22 echo "# DevOps Workshop Repo" > README.md
+   git add README.md
+   git commit -m "Initial commit"
+
+//Rename the branch to main
+23 git branch -M main
+
+//Push to GitHub
+24 git push -u origin main
+
+//Set up your Git identity
+25 git config --global user.name "Kashmala Khan"
+   git config --global user.email "kashmalakhan5812.com"
+
+//Option 2: Set it only for this repository
+26  git config user.name "Kashmala Khan"
+    git config user.email "youremail@example.com"
+
+//After setting your identity
+27 git commit -m "Initial commit"
+
+//Then push to GitHub
+28  git push -u origin main
+
+github repo= 1)fork(ek repo se apni repo m copy krna ye hota h githyb to github)          
+           2)clone(as it is copy) github to local
+
+
+
+CLONE THE REPOSITORY FROM GITHUB TO LOCAL(GIT)
+
+29  cd (folder name)
+30  mkdir (folder name)
+31  cd (folder name)
+32  ls
+33  git clone https://github.com/Ranokhan0256/github-for-devops-workshop.git(URL of cole mean go to code keyword)
+34  ls
+35  cd github-for-devops-workshop (us folder k andr chly jygy)
+36  ls
+37  
+
+COPY GITHUB TO GITHUB
+FROM GITHUB TO LOCAL
+PUSH CODE FROM LOCAL TO GITHUB
+
+
+
+PUSHING CHANGES FROM LOCAL(GIT) TO GITHUB
+firstly your all files should be stages then you can commit CHANGES
+37  git status
+38  git add into.py(filemae)
+39  git commit -m "Updated README, into.py, and testing.py"
+40  git push origin main
+        CHANGES EASILY pushed
+
+
+hey guys imhere
+
+        
+
+

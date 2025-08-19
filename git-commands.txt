@@ -86,8 +86,7 @@ firstly your all files should be stages then you can commit CHANGES
         CHANGES EASILY pushed
 
 
-hey guys imhere
-
-        
+hey guys imhere FROM GIT
+HELLO GUYS FROM GITHUB
 
 

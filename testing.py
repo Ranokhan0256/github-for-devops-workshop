@@ -1,2 +1,5 @@
-print("hello kashmala khan!")
-print("hey : guysss kses hn sabbbbbbb")
+def hello() -> str:
+    return "Hello Dosto"
+
+
+print(hello())

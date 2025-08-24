@@ -1,15 +1,7 @@
-def my_function():
-    a=5
-    b=7
-    c=7
-    return d
+class Greeter:
+    def hello(self) -> str:
+        return "Hello Dosto"
 
 
-my_function()
-x=1
-print(y)
-
-
-
-
-test()
+g = Greeter()
+print(g.hello())

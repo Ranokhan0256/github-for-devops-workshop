@@ -154,9 +154,51 @@ create a file demo.py
 17 flake8 demo.py     //this have path issue path in installed so use another one next to it
 17 python -m flake8 demo.py       //shows error that are in demo.py file have
 
+TELLS ERROR DURING COMMITING 
+PASTE THIS CODE IN PRE-COMMIT FILE
+#!/bin/sh
+# Git pre-commit hook for Python linting with flake8
+
+echo "🔍 Running flake8 lint check on staged Python files..."
+
+# Get staged Python files
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')
+
+if [ -z "$FILES" ]; then
+    echo "✅ No Python files staged. Skipping flake8."
+    exit 0
+fi
+
+# Run flake8 on each staged file
+for file in $FILES; do
+    echo "Checking $file ..."
+    python -m flake8 "$file"
+    if [ $? -ne 0 ]; then
+        echo "❌ Flake8 found issues in $file. Commit aborted."
+        exit 1
+    fi
+done
+
+echo "✅ All staged Python files passed flake8"
+exit 0
+
+1. chmod +x .git/hooks/pre-commit
+2  git add demo.py
+3  git commit -m "test hook"
 
 
 
 
+
+GITHUB ACTIONS::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+build,test, deploy code using tool jenkins jha ap CI\CD pipelines bnaty hhn
+jenkins(CI\CD pipeline)njo ap github pe bhi bna skhty hhen known as GITHUB ACTIONS
+GITHUB ACTION  ia in-built tool
+
+throghh pylint you can chech the quality of ur code
+
+
+
+ksi be cheex ko apko AWS se connect krna hhen apko security crediantls chaye hoty hhen
 
 

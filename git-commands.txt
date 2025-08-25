@@ -90,3 +90,73 @@ hey guys imhere FROM GIT
 HELLO GUYS FROM GITHUB
 
 
+FROM GITHUB TO LOCAL
+made changes means commit on github and save then run command
+41  git pull
+
+
+
+BRANCHES
+Main and master
+
+master/main k andar kuch files hhen jin me se ek new branch nikali hhen dev ur phr us dev branch k andr ek ur file daldi
+master/main apni copied khud maintain krty hhen
+master /main ko nahi pta deb me chal raha hhen
+14 git branch                                //to see in which  branch we are
+15 git branch new-branch-named-dev           //created new branch 
+16 git switch new-branch-named-devn        //switch from main/master branch to new branch
+17 git status                             //check status on which branch you are
+18 git add this-is-from-dev.txt           //firslt create a file of this name then add that file
+19 git commit -m "added dev file"         //commit changes
+20 git push origin new-branch-named-dev   //puch changes to github
+21 git status                            //check  on branch you are
+22 git switch main                      //switch to branch main from dev
+23 ls                                   //list files of main branch it will not show the file which is in dev branch
+
+HEAD is the latest comit (apky branch ka latest comit )
+24 git log --oneline                   //used to  the when changes occur
+25 git checkout new-branch-named-dev   //also used to switch branch
+
+PULL REQUEST is the way of merging two BRANCHES 
+create pull req and merge main with new-branch-named-dev then the files of new-branch-named-dev will be in main branch
+the pull that to local too
+26 git switch main
+27 git pull origin main
+28 git fetch          //used to tranfer remote branch from github to local
+29 
+
+
+HOOKS:
+
+1 ls -force                  //list all the files including hidden also have git folder with others
+2 cd .git                    //go to git folder
+3 ls                         //list all the files from git folder also have hooks folder with others
+4 cd hooks                   //go to the hooks folder
+5 ls                         //list all the files from hooks folder
+6 vim pre-commit             // create afile vim   
+go to setting write user.exclude and go to files exclude nad then click files on the sidebar then list show
+from that list remove .git then you will see  the .git folder
+7 cd..
+8 cd..
+pre-commit file should'nt empty
+9 cd .git/hooks
+10  Set-Content -NoNewline -Encoding ascii pre-commit "#!/bin/sh`nexit 0`n"
+11 Get-Content .\pre-commit
+it will showw like thhat:
+#!/bin/sh
+exit 0
+
+create a file demo.py
+12 git status
+13 git add demo.py
+14 git commit -m "addded code"
+15 pip install flake8         //flake8 se ap apny code ki quality ko taste kr lety hho
+17 flake8 demo.py     //this have path issue path in installed so use another one next to it
+17 python -m flake8 demo.py       //shows error that are in demo.py file have
+
+
+
+
+
+
+

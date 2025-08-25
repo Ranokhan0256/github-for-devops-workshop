@@ -1,7 +1,5 @@
-class Greeter:
-    def hello(self) -> str:
-        return "Hello Dosto"
+def hello() -> str:
+    return "Hello Dosto"
 
 
-g = Greeter()
-print(g.hello())
+print(hello())
